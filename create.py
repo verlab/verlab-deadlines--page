@@ -6,26 +6,6 @@ with open("_data/conferences.yml", 'r') as stream:
     conferencesdata = yaml.load(stream)
 
 
-# <div id="icra18" class=" RO-conf ">
-#   <div class="row">
-#       <div class="col-xs-12 col-sm-6">
-#           <a href="http://www.icra2018.org/"><b>ICRA 2018</b></a>
-#           <div class="meta">
-#             May 21-25, 2018 // <a href="http://maps.google.com/?q=Brisbane, Australia">Brisbane, Australia</a>
-#           </div>
-#       </div>
-#       <div class="col-xs-12 col-sm-6">
-#         <span class="timer"></span>
-#         <div class="deadline">
-#           <div>Deadline:
-#             <span class="deadline-time"></span>
-#           </div>
-#         </div>
-#       </div>
-#   </div>
-#   <hr>
-# </div>
-
 html = '''<div id="conf_id" class=" conf_sub-conf ">
   <div class="row">
       <div class="col-xs-12 col-sm-6">
