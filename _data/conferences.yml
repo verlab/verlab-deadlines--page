@@ -1,30 +1,49 @@
 ---
 
-- name: ICRA
+- name: IROS
   year: 2018
-  id: icra18
-  link: http://www.icra2018.org/
-  deadline: "2017-09-15 23:59:59"
-  date: May 21-25, 2018
-  place: Brisbane, Australia
+  id: iros18
+  link: https://www.iros2018.org/
+  deadline: "2018-03-1 23:59:59"
+  date: Oct 1-5, 2018
+  place: Madri, Spain
   sub: RO
 
-- name: AISTATS
+- name: CASE
   year: 2018
-  id: aistats18
-  link: http://www.aistats.org/
-  deadline: "2017-10-13 23:59:59"
-  date: April 9-11, 2018
-  place: Lanzarote, Spain
+  id: case18
+  link: http://www.case2018.org/ 
+  deadline: "2018-02-15 23:59:59"
+  date: August 20-24, 2018
+  place: Munich, Germany
+  sub: RO
+
+- name: DARS
+  year: 2018
+  id: dars18
+  link: http://www.roboticmaterials.com/dars2018/
+  deadline: "2018-05-15 23:59:59"
+  date: October 15-17, 2018
+  place: Colorado, USA
+  sub: RO
+
+
+- name: GECCO
+  year: 2018
+  id: gecco18
+  link: http://gecco-2018.sigevo.org/
+  deadline: "2018-01-30 23:59:59"
+  date: July 15-19, 2018
+  place: Kyoto, Japan
   sub: ML
 
-- name: SBR
-  year: 2018
-  id: sbr18
-  link: http://sbr2018.com.br
-  deadline: "2017-10-27 17:00:00"
-  date: April 30-May 3, 2018
-  place: Curitiba, BR
-  sub: RO
 
+- name: HRI
+  year: 2018
+  id: hri18
+  link: http://humanrobotinteraction.org/2018/
+  deadline: "2017-10-08 23:59:59"
+  date: March 5-8, 2018
+  place: Chicago, USA
+  sub: RO
 
