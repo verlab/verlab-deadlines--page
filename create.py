@@ -5,6 +5,8 @@ import yaml
 with open("_data/conferences.yml", 'r') as stream:
     conferencesdata = yaml.load(stream)
 
+conferencesdata = sorted(conferencesdata, key=lambda k: k['deadline'])
+
 
 html = '''<div id="conf_id" class=" conf_sub-conf ">
   <div class="row">

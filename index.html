@@ -89,54 +89,12 @@
 
 
 
-<div id="iros18" class=" RO-conf ">
+<div id="hri18" class=" RO-conf ">
   <div class="row">
       <div class="col-xs-12 col-sm-6">
-          <a href="https://www.iros2018.org/"><b>IROS 2018</b></a>
+          <a href="http://humanrobotinteraction.org/2018/"><b>HRI 2018</b></a>
           <div class="meta">
-            Oct 1-5, 2018 // <a href="http://maps.google.com/?q=Madri, Spain">Madri, Spain</a>
-          </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <span class="timer"></span>
-        <div class="deadline">
-          <div>Deadline:
-            <span class="deadline-time"></span>
-          </div>
-        </div>
-      </div>
-  </div>
-  <hr>
-</div>
-
-
-<div id="case18" class=" RO-conf ">
-  <div class="row">
-      <div class="col-xs-12 col-sm-6">
-          <a href="http://www.case2018.org/"><b>CASE 2018</b></a>
-          <div class="meta">
-            August 20-24, 2018 // <a href="http://maps.google.com/?q=Munich, Germany">Munich, Germany</a>
-          </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <span class="timer"></span>
-        <div class="deadline">
-          <div>Deadline:
-            <span class="deadline-time"></span>
-          </div>
-        </div>
-      </div>
-  </div>
-  <hr>
-</div>
-
-
-<div id="dars18" class=" RO-conf ">
-  <div class="row">
-      <div class="col-xs-12 col-sm-6">
-          <a href="http://www.roboticmaterials.com/dars2018/"><b>DARS 2018</b></a>
-          <div class="meta">
-            October 15-17, 2018 // <a href="http://maps.google.com/?q=Colorado, USA">Colorado, USA</a>
+            March 5-8, 2018 // <a href="http://maps.google.com/?q=Chicago, USA">Chicago, USA</a>
           </div>
       </div>
       <div class="col-xs-12 col-sm-6">
@@ -173,12 +131,54 @@
 </div>
 
 
-<div id="hri18" class=" RO-conf ">
+<div id="case18" class=" RO-conf ">
   <div class="row">
       <div class="col-xs-12 col-sm-6">
-          <a href="http://humanrobotinteraction.org/2018/"><b>HRI 2018</b></a>
+          <a href="http://www.case2018.org/"><b>CASE 2018</b></a>
           <div class="meta">
-            March 5-8, 2018 // <a href="http://maps.google.com/?q=Chicago, USA">Chicago, USA</a>
+            August 20-24, 2018 // <a href="http://maps.google.com/?q=Munich, Germany">Munich, Germany</a>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <span class="timer"></span>
+        <div class="deadline">
+          <div>Deadline:
+            <span class="deadline-time"></span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <hr>
+</div>
+
+
+<div id="iros18" class=" RO-conf ">
+  <div class="row">
+      <div class="col-xs-12 col-sm-6">
+          <a href="https://www.iros2018.org/"><b>IROS 2018</b></a>
+          <div class="meta">
+            Oct 1-5, 2018 // <a href="http://maps.google.com/?q=Madri, Spain">Madri, Spain</a>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <span class="timer"></span>
+        <div class="deadline">
+          <div>Deadline:
+            <span class="deadline-time"></span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <hr>
+</div>
+
+
+<div id="dars18" class=" RO-conf ">
+  <div class="row">
+      <div class="col-xs-12 col-sm-6">
+          <a href="http://www.roboticmaterials.com/dars2018/"><b>DARS 2018</b></a>
+          <div class="meta">
+            October 15-17, 2018 // <a href="http://maps.google.com/?q=Colorado, USA">Colorado, USA</a>
           </div>
       </div>
       <div class="col-xs-12 col-sm-6">
@@ -206,50 +206,18 @@
     $(function() {
 // adjust date according to deadline timezone
 var timezone =  "America/New_York" ;
-var confDate = moment.tz("2018-03-1 23:59:59", timezone);
+var confDate = moment.tz("2017-10-08 23:59:59", timezone);
 
 // render countdown timer
-$('#iros18 .timer').countdown(confDate.toDate(), function(event) {
+$('#hri18 .timer').countdown(confDate.toDate(), function(event) {
   $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
 });
-$('#iros18 .deadline-time').html(confDate.toString());
+$('#hri18 .deadline-time').html(confDate.toString());
 
 // check if date has passed, add 'past' class to it
 var today = moment();
 if (today.diff(confDate) > 0)
-$('#iros18').addClass('past');
-
-
-// adjust date according to deadline timezone
-var timezone =  "America/New_York" ;
-var confDate = moment.tz("2018-02-15 23:59:59", timezone);
-
-// render countdown timer
-$('#case18 .timer').countdown(confDate.toDate(), function(event) {
-  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
-});
-$('#case18 .deadline-time').html(confDate.toString());
-
-// check if date has passed, add 'past' class to it
-var today = moment();
-if (today.diff(confDate) > 0)
-$('#case18').addClass('past');
-
-
-// adjust date according to deadline timezone
-var timezone =  "America/New_York" ;
-var confDate = moment.tz("2018-05-15 23:59:59", timezone);
-
-// render countdown timer
-$('#dars18 .timer').countdown(confDate.toDate(), function(event) {
-  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
-});
-$('#dars18 .deadline-time').html(confDate.toString());
-
-// check if date has passed, add 'past' class to it
-var today = moment();
-if (today.diff(confDate) > 0)
-$('#dars18').addClass('past');
+$('#hri18').addClass('past');
 
 
 // adjust date according to deadline timezone
@@ -270,18 +238,50 @@ $('#gecco18').addClass('past');
 
 // adjust date according to deadline timezone
 var timezone =  "America/New_York" ;
-var confDate = moment.tz("2017-10-08 23:59:59", timezone);
+var confDate = moment.tz("2018-02-15 23:59:59", timezone);
 
 // render countdown timer
-$('#hri18 .timer').countdown(confDate.toDate(), function(event) {
+$('#case18 .timer').countdown(confDate.toDate(), function(event) {
   $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
 });
-$('#hri18 .deadline-time').html(confDate.toString());
+$('#case18 .deadline-time').html(confDate.toString());
 
 // check if date has passed, add 'past' class to it
 var today = moment();
 if (today.diff(confDate) > 0)
-$('#hri18').addClass('past');
+$('#case18').addClass('past');
+
+
+// adjust date according to deadline timezone
+var timezone =  "America/New_York" ;
+var confDate = moment.tz("2018-03-1 23:59:59", timezone);
+
+// render countdown timer
+$('#iros18 .timer').countdown(confDate.toDate(), function(event) {
+  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+});
+$('#iros18 .deadline-time').html(confDate.toString());
+
+// check if date has passed, add 'past' class to it
+var today = moment();
+if (today.diff(confDate) > 0)
+$('#iros18').addClass('past');
+
+
+// adjust date according to deadline timezone
+var timezone =  "America/New_York" ;
+var confDate = moment.tz("2018-05-15 23:59:59", timezone);
+
+// render countdown timer
+$('#dars18 .timer').countdown(confDate.toDate(), function(event) {
+  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+});
+$('#dars18 .deadline-time').html(confDate.toString());
+
+// check if date has passed, add 'past' class to it
+var today = moment();
+if (today.diff(confDate) > 0)
+$('#dars18').addClass('past');
 
 
 
