@@ -3,10 +3,10 @@
   sub: ML
 - name: Computer Vision
   sub: CV
-- name: Natural Language Processing
-  sub: NLP
+- name: Computer Graphics
+  sub: CG
 - name: Robotics
   sub: RO
-- name: Speech/SigProc
-  sub: SP
+- name: Image Processing
+  sub: IP
 
