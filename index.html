@@ -223,6 +223,27 @@
 </div>
 
 
+<div id="rss18" class=" RO-conf ">
+  <div class="row">
+      <div class="col-xs-12 col-sm-6">
+          <a href="http://www.roboticsconference.org/"><b>RSS 2018</b></a>
+          <div class="meta">
+            June 26-30, 2018 // <a href="http://maps.google.com/?q=Pittsburgh, Pennsylvania, USA">Pittsburgh, Pennsylvania, USA</a>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <span class="timer"></span>
+        <div class="deadline">
+          <div>Deadline:
+            <span class="deadline-time"></span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <hr>
+</div>
+
+
 <div id="icip18" class=" PR-conf ">
   <div class="row">
       <div class="col-xs-12 col-sm-6">
@@ -453,6 +474,22 @@ $('#gecco18 .deadline-time').html(confDate.toString());
 var today = moment();
 if (today.diff(confDate) > 0)
 $('#gecco18').addClass('past');
+
+
+// adjust date according to deadline timezone
+var timezone =  "America/New_York" ;
+var confDate = moment.tz("2018-02-01 23:59:59", timezone);
+
+// render countdown timer
+$('#rss18 .timer').countdown(confDate.toDate(), function(event) {
+  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+});
+$('#rss18 .deadline-time').html(confDate.toString());
+
+// check if date has passed, add 'past' class to it
+var today = moment();
+if (today.diff(confDate) > 0)
+$('#rss18').addClass('past');
 
 
 // adjust date according to deadline timezone
