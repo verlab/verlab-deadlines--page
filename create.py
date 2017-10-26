@@ -59,7 +59,7 @@ allconferences_html = '''
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>AI Conference Deadlines</title>
-    <meta name="description" content="Countdowns to top CV/NLP/ML/Robotics/AI conference deadlines">
+    <meta name="description" content="Countdowns to top CV/PR/ML/Robotics/CG conference deadlines">
     <meta name="author" content="Abhishek Das">
     <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/deadlines.css" media="screen,projection">
@@ -112,7 +112,7 @@ allconferences_html = '''
                       <div class="col-md-2 col-xs-5">
                         <div class="checkbox">
                           <label>
-                            <input type="checkbox" id="NLP-checkbox" class=""> Natural Language Processing
+                            <input type="checkbox" id="PR-checkbox" class=""> Pattern Recognition
                           </label>
                         </div>
                       </div>
@@ -128,7 +128,15 @@ allconferences_html = '''
                       <div class="col-md-2 col-xs-5">
                         <div class="checkbox">
                           <label>
-                            <input type="checkbox" id="SP-checkbox" class=""> Speech/SigProc
+                            <input type="checkbox" id="IP-checkbox" class=""> Image Processing
+                          </label>
+                        </div>
+                      </div>
+
+		      <div class="col-md-2 col-xs-5">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" id="CG-checkbox" class=""> Computer Graphics
                           </label>
                         </div>
                       </div>
@@ -184,7 +192,7 @@ allconferences_html += '''
 allconferences_javascript+= '''
 
         // Set checkboxes
-        var conf_type_data = [{"name":"Machine Learning","sub":"ML"},{"name":"Computer Vision","sub":"CV"},{"name":"Natural Language Processing","sub":"NLP"},{"name":"Robotics","sub":"RO"},{"name":"Speech/SigProc","sub":"SP"}];
+        var conf_type_data = [{"name":"Machine Learning","sub":"ML"},{"name":"Computer Vision","sub":"CV"},{"name":"Pattern Recognition","sub":"PR"},{"name":"Robotics","sub":"RO"},{"name":"Image Processing","sub":"IP"}, {"name":"Computer Graphics","sub":"CG"}];
         var all_subs = [];
         for (var i = 0; i < conf_type_data.length; i++) {
           all_subs[i] = conf_type_data[i]['sub'];

@@ -3,6 +3,8 @@
   sub: ML
 - name: Computer Vision
   sub: CV
+- name: Pattern Recognition
+  sub: PR
 - name: Computer Graphics
   sub: CG
 - name: Robotics
