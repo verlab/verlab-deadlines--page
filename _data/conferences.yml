@@ -19,14 +19,14 @@
   place: Munich, Germany
   sub: CV
 
-- name: ICCV
-  year: 2018
-  id: iccv18
-  link: https://www.waset.org/conference/2018/01/zurich/ICCV
-  deadline: "2017-11-17 23:59:59"
-  date: Jan 15-16, 2018
-  place: Zurich, Switzerland
-  sub: CV
+# - name: ICCV
+#   year: 2017
+#   id: iccv17
+#   link: https://www.waset.org/conference/2018/01/zurich/ICCV
+#   deadline: "2017-04-17 23:59:59"
+#   date: Jan 22-29, 2017
+#   place: Venice, Italy
+#   sub: CV
 
 
 - name: CVPR
