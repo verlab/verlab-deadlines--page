@@ -89,6 +89,27 @@
 
 
 
+<div id="wacv18" class=" CV-conf ">
+  <div class="row">
+      <div class="col-xs-12 col-sm-6">
+          <a href="http://wacv18.uccs.us/"><b>WACV 2018</b></a>
+          <div class="meta">
+            March 12-14, 2018 // <a href="http://maps.google.com/?q=Lake Tahoe, USA">Lake Tahoe, USA</a>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <span class="timer"></span>
+        <div class="deadline">
+          <div>Deadline:
+            <span class="deadline-time"></span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <hr>
+</div>
+
+
 <div id="hri18" class=" RO-conf ">
   <div class="row">
       <div class="col-xs-12 col-sm-6">
@@ -110,12 +131,96 @@
 </div>
 
 
+<div id="cvpr18" class=" CV-conf ">
+  <div class="row">
+      <div class="col-xs-12 col-sm-6">
+          <a href="http://cvpr2018.thecvf.com/"><b>CVPR 2018</b></a>
+          <div class="meta">
+            Jun 18-22, 2018 // <a href="http://maps.google.com/?q=Salt Lake City, USA">Salt Lake City, USA</a>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <span class="timer"></span>
+        <div class="deadline">
+          <div>Deadline:
+            <span class="deadline-time"></span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <hr>
+</div>
+
+
+<div id="iccv18" class=" CV-conf ">
+  <div class="row">
+      <div class="col-xs-12 col-sm-6">
+          <a href="https://www.waset.org/conference/2018/01/zurich/ICCV"><b>ICCV 2018</b></a>
+          <div class="meta">
+            Jan 15-16, 2018 // <a href="http://maps.google.com/?q=Zurich, Switzerland">Zurich, Switzerland</a>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <span class="timer"></span>
+        <div class="deadline">
+          <div>Deadline:
+            <span class="deadline-time"></span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <hr>
+</div>
+
+
+<div id="icpr18" class=" PR/CV-conf ">
+  <div class="row">
+      <div class="col-xs-12 col-sm-6">
+          <a href="http://www.icpr2018.org/"><b>ICPR 2018</b></a>
+          <div class="meta">
+            August 20-24, 2018 // <a href="http://maps.google.com/?q=Beijing, China">Beijing, China</a>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <span class="timer"></span>
+        <div class="deadline">
+          <div>Deadline:
+            <span class="deadline-time"></span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <hr>
+</div>
+
+
 <div id="gecco18" class=" ML-conf ">
   <div class="row">
       <div class="col-xs-12 col-sm-6">
           <a href="http://gecco-2018.sigevo.org/"><b>GECCO 2018</b></a>
           <div class="meta">
             July 15-19, 2018 // <a href="http://maps.google.com/?q=Kyoto, Japan">Kyoto, Japan</a>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <span class="timer"></span>
+        <div class="deadline">
+          <div>Deadline:
+            <span class="deadline-time"></span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <hr>
+</div>
+
+
+<div id="icip18" class=" PR-conf ">
+  <div class="row">
+      <div class="col-xs-12 col-sm-6">
+          <a href="https://2018.ieeeicip.org/"><b>ICIP 2018</b></a>
+          <div class="meta">
+            Oct 7-10, 2018 // <a href="http://maps.google.com/?q=Athens, Greece">Athens, Greece</a>
           </div>
       </div>
       <div class="col-xs-12 col-sm-6">
@@ -158,6 +263,27 @@
           <a href="https://www.iros2018.org/"><b>IROS 2018</b></a>
           <div class="meta">
             Oct 1-5, 2018 // <a href="http://maps.google.com/?q=Madri, Spain">Madri, Spain</a>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <span class="timer"></span>
+        <div class="deadline">
+          <div>Deadline:
+            <span class="deadline-time"></span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <hr>
+</div>
+
+
+<div id="bmvc18" class=" CV-conf ">
+  <div class="row">
+      <div class="col-xs-12 col-sm-6">
+          <a href="http://bmvc2018.org/"><b>BMVC 2018</b></a>
+          <div class="meta">
+            Sep 3-6, 2018 // <a href="http://maps.google.com/?q=Newcastle, UK">Newcastle, UK</a>
           </div>
       </div>
       <div class="col-xs-12 col-sm-6">
@@ -227,6 +353,22 @@
     $(function() {
 // adjust date according to deadline timezone
 var timezone =  "America/New_York" ;
+var confDate = moment.tz("2017-09-08 23:59:59", timezone);
+
+// render countdown timer
+$('#wacv18 .timer').countdown(confDate.toDate(), function(event) {
+  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+});
+$('#wacv18 .deadline-time').html(confDate.toString());
+
+// check if date has passed, add 'past' class to it
+var today = moment();
+if (today.diff(confDate) > 0)
+$('#wacv18').addClass('past');
+
+
+// adjust date according to deadline timezone
+var timezone =  "America/New_York" ;
 var confDate = moment.tz("2017-10-08 23:59:59", timezone);
 
 // render countdown timer
@@ -243,6 +385,54 @@ $('#hri18').addClass('past');
 
 // adjust date according to deadline timezone
 var timezone =  "America/New_York" ;
+var confDate = moment.tz("2017-11-15 23:59:59", timezone);
+
+// render countdown timer
+$('#cvpr18 .timer').countdown(confDate.toDate(), function(event) {
+  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+});
+$('#cvpr18 .deadline-time').html(confDate.toString());
+
+// check if date has passed, add 'past' class to it
+var today = moment();
+if (today.diff(confDate) > 0)
+$('#cvpr18').addClass('past');
+
+
+// adjust date according to deadline timezone
+var timezone =  "America/New_York" ;
+var confDate = moment.tz("2017-11-17 23:59:59", timezone);
+
+// render countdown timer
+$('#iccv18 .timer').countdown(confDate.toDate(), function(event) {
+  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+});
+$('#iccv18 .deadline-time').html(confDate.toString());
+
+// check if date has passed, add 'past' class to it
+var today = moment();
+if (today.diff(confDate) > 0)
+$('#iccv18').addClass('past');
+
+
+// adjust date according to deadline timezone
+var timezone =  "America/New_York" ;
+var confDate = moment.tz("2018-01-05 23:59:59", timezone);
+
+// render countdown timer
+$('#icpr18 .timer').countdown(confDate.toDate(), function(event) {
+  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+});
+$('#icpr18 .deadline-time').html(confDate.toString());
+
+// check if date has passed, add 'past' class to it
+var today = moment();
+if (today.diff(confDate) > 0)
+$('#icpr18').addClass('past');
+
+
+// adjust date according to deadline timezone
+var timezone =  "America/New_York" ;
 var confDate = moment.tz("2018-01-30 23:59:59", timezone);
 
 // render countdown timer
@@ -255,6 +445,22 @@ $('#gecco18 .deadline-time').html(confDate.toString());
 var today = moment();
 if (today.diff(confDate) > 0)
 $('#gecco18').addClass('past');
+
+
+// adjust date according to deadline timezone
+var timezone =  "America/New_York" ;
+var confDate = moment.tz("2018-02-07 23:59:59", timezone);
+
+// render countdown timer
+$('#icip18 .timer').countdown(confDate.toDate(), function(event) {
+  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+});
+$('#icip18 .deadline-time').html(confDate.toString());
+
+// check if date has passed, add 'past' class to it
+var today = moment();
+if (today.diff(confDate) > 0)
+$('#icip18').addClass('past');
 
 
 // adjust date according to deadline timezone
@@ -287,6 +493,22 @@ $('#iros18 .deadline-time').html(confDate.toString());
 var today = moment();
 if (today.diff(confDate) > 0)
 $('#iros18').addClass('past');
+
+
+// adjust date according to deadline timezone
+var timezone =  "America/New_York" ;
+var confDate = moment.tz("2018-04-30 23:59:59", timezone);
+
+// render countdown timer
+$('#bmvc18 .timer').countdown(confDate.toDate(), function(event) {
+  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+});
+$('#bmvc18 .deadline-time').html(confDate.toString());
+
+// check if date has passed, add 'past' class to it
+var today = moment();
+if (today.diff(confDate) > 0)
+$('#bmvc18').addClass('past');
 
 
 // adjust date according to deadline timezone
