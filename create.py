@@ -58,7 +58,7 @@ allconferences_html = '''
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>AI Conference Deadlines</title>
+    <title>VeRLab Conference Deadlines</title>
     <meta name="description" content="Countdowns to top CV/PR/ML/Robotics/CG conference deadlines">
     <meta name="author" content="Abhishek Das">
     <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
