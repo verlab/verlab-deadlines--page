@@ -19,14 +19,14 @@
   place: Munich, Germany
   sub: CV
 
-- name: ICCV
-  year: 2018
-  id: iccv18
-  link: https://www.waset.org/conference/2018/01/zurich/ICCV
-  deadline: "2017-11-17 23:59:59"
-  date: Jan 15-16, 2018
-  place: Zurich, Switzerland
-  sub: CV
+# - name: ICCV
+#   year: 2017
+#   id: iccv17
+#   link: https://www.waset.org/conference/2018/01/zurich/ICCV
+#   deadline: "2017-04-17 23:59:59"
+#   date: Jan 22-29, 2017
+#   place: Venice, Italy
+#   sub: CV
 
 
 - name: CVPR
@@ -38,11 +38,20 @@
   place: Salt Lake City, USA
   sub: CV  
 
+# - name: WACV
+#   year: 2018
+#   id: wacv18
+#   link: http://wacv18.uccs.us/
+#   deadline: "2017-09-08 23:59:59"
+#   date: March 12-14, 2018
+#   place: Lake Tahoe, USA
+#   sub: CV  
+
 - name: WACV
   year: 2018
   id: wacv18
   link: http://wacv18.uccs.us/
-  deadline: "2017-09-08 23:59:59"
+  deadline: "2017-12-01 23:59:59"
   date: March 12-14, 2018
   place: Lake Tahoe, USA
   sub: CV  
@@ -72,7 +81,7 @@
   deadline: "2018-02-07 23:59:59"
   date: Oct 7-10, 2018
   place: Athens, Greece
-  sub: PR
+  sub: IP
 
 - name: ICPR
   year: 2018
