@@ -158,12 +158,12 @@
   sub: ML
 
 
-- name: HRI
-  year: 2018
-  id: hri18
-  link: http://humanrobotinteraction.org/2018/
-  deadline: "2017-10-08 23:59:59"
-  date: March 5-8, 2018
-  place: Chicago, USA
-  sub: RO
+#- name: HRI
+#  year: 2018
+#  id: hri18
+#  link: http://humanrobotinteraction.org/2018/
+#  deadline: "2017-10-08 23:59:59"
+#  date: March 5-8, 2018
+#  place: Chicago, USA
+#  sub: RO
 
